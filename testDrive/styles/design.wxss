@@ -1,0 +1,41 @@
+/* exterior_design & interior_design */
+.design {
+    text-align: center;
+    padding-top: 80rpx;
+    box-sizing: border-box;
+}
+
+.design.exterior {
+    background: #fff;
+}
+
+.design.interior {
+    background: #F9F8F9;
+}
+
+.design text {
+    font-size: 34rpx;
+    color: rgb(68, 67, 67);
+    letter-spacing: 8rpx;
+}
+
+.design .content {
+    font-size: 35rpx;
+    padding: 20rpx 70rpx;
+}
+
+.design .content .header {
+    font-size: 50rpx;
+    font-weight: bold;
+    padding: 10rpx 0 30rpx;
+}
+
+.design .content .description {
+    color: #000;
+    padding-bottom: 50rpx;
+}
+
+.design image {
+    position: relative;
+    padding-top: 8rpx;
+}

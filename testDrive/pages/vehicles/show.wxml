@@ -1,0 +1,50 @@
+<!--pages/vehicles/show.wxml-->
+<view class="info">
+    <image src="{{entities.image}}" mode="aspectFill">
+        <view class="header white">{{entities.header}}</view>
+        <view class="sub-header white">{{entities.sub_header}}</view>
+        <view class="price white">{{entities.meta.price}}</view>
+    </image>
+    <view class="meta">
+        <view class="left">
+            <text>二氧化碳排放</text>
+            <view class="CO2">{{entities.meta.carbon_dioxide}}
+                <text> 克/公里</text>
+            </view>
+        </view>
+        <view class="right">
+            <text>综合燃油</text>
+            <view class="fuel">{{entities.meta.fuel}}
+                <text> 升/百公里</text>
+            </view>
+        </view>
+    </view>
+    <view class="description">{{entities.description}}</view>
+    <button class="button primary center" bindtap="testDrive">预约试驾</button>
+</view>
+<swiper class="section design exterior" indicator-dots="{{true}}" circular="{{circular}}">
+    <block wx:for="{{entities.meta.exterior_design}}" wx:key="index">
+        <swiper-item>
+            <text>外观</text>
+            <view class="content">
+                <view class="header">{{item.header}}</view>
+                <view class="description">{{item.description}}</view>
+            </view>
+            <!-- mode  aspectFill 等比例缩放 -->
+            <image src="{{item.image}}" mode="aspectFill" bindtap="show_ext_PreImg" data-index="{{index}}" />
+        </swiper-item>
+    </block>
+</swiper>
+<swiper class="section design interior" indicator-dots="{{true}}" circular="{{circular}}">
+    <block wx:for="{{entities.meta.interior_design}}" wx:key="index">
+        <swiper-item>
+            <text>内饰</text>
+            <view class="content">
+                <view class="header">{{item.header}}</view>
+                <view class="description">{{item.description}}</view>
+            </view>
+            <!-- mode  aspectFill 等比例缩放 -->
+            <image src="{{item.image}}" mode="aspectFill" bindtap="show_inte_PreImg" data-index="{{index}}" />
+        </swiper-item>
+    </block>
+</swiper>
