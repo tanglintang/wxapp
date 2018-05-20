@@ -1,5 +1,6 @@
 // pages/vehicles/show.js
-
+// 引入模块
+import testDrive from '../../modules/test-drive'
 const app = getApp()
 
 Page({
@@ -27,6 +28,7 @@ Page({
 			entities: temp
 		})
 	},
+	testDrive,
 	// 图片预览
 	previewImage: function(index, target) {
 		const source = this.data.entities.meta[target]
@@ -57,7 +59,6 @@ Page({
 
 		this.previewImage(index, 'interior_design')
 	},
-
 	/**
 	 * 生命周期函数--监听页面初次渲染完成
 	 */
