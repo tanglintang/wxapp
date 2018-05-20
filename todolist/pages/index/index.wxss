@@ -143,6 +143,14 @@ icon {
 	animation: moveRight linear 0.5s forwards;
 }
 
+.nodata {
+	padding: 30rpx;
+	color: #999;
+	font-size: 11pt;
+	text-align: center;
+	font-style: italic;
+}
+
 @keyframes moveLeft {
 	0% {
 		transform: translateX(0);

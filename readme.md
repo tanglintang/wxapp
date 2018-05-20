@@ -20,7 +20,7 @@
 
 - 根目录下
     - 配置文件 
-        app.json 有多少个 app 都要在这注册
+        app.json 有多少个 app 页面都要在这注册
         下面可以改 navigationBar         
 
 wxml => html    
